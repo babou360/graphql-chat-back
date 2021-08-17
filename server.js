@@ -8,6 +8,7 @@ const {sequelize} = require('./models/index')
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context: (ctx) => ctx,
   plugins: [
     ApolloServerPluginLandingPageGraphQLPlayground({
       // options
